@@ -1,0 +1,144 @@
+<p-card
+  header="Formulário de Cadastro de Cliente"
+  subheader="O seguinte cadastro será utilizado em Vendas e Ordens de Serviço"
+>
+  <div class="form-grid">
+
+    <div class="campo campo-nome">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="nome"
+          [(ngModel)]="cliente.nome"
+          autocomplete="off"
+        />
+        <label for="nome">Nome: *</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <p-select
+          id="tipoPessoa"
+          [options]="tipoPessoaOptions"
+          optionLabel="label"
+          optionValue="value"
+          [(ngModel)]="cliente.tipoPessoa"
+          placeholder="Selecione"
+        ></p-select>
+        <label for="tipoPessoa">Tipo de Pessoa: *</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="cpfCnpj"
+          [(ngModel)]="cliente.cpfCnpj"
+          autocomplete="off"
+        />
+        <label for="cpfCnpj">CPF/CNPJ: *</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="telefone"
+          [(ngModel)]="cliente.telefone"
+          autocomplete="off"
+        />
+        <label for="telefone">Telefone:</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="cep"
+          [(ngModel)]="cliente.cep"
+          autocomplete="off"
+        />
+        <label for="cep">CEP:</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="cidade"
+          [(ngModel)]="cliente.cidade"
+          autocomplete="off"
+        />
+        <label for="cidade">Cidade:</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="endereco"
+          [(ngModel)]="cliente.endereco"
+          autocomplete="off"
+        />
+        <label for="endereco">Endereço:</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="bairro"
+          [(ngModel)]="cliente.bairro"
+          autocomplete="off"
+        />
+        <label for="bairro">Bairro:</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="numero"
+          [(ngModel)]="cliente.numero"
+          autocomplete="off"
+        />
+        <label for="numero">Número:</label>
+      </p-floatlabel>
+    </div>
+
+    <div class="campo">
+      <p-floatlabel>
+        <input
+          pInputText
+          id="email"
+          [(ngModel)]="cliente.email"
+          autocomplete="off"
+        />
+        <label for="email">E-mail:</label>
+      </p-floatlabel>
+    </div>
+
+  </div>
+
+  <div class="botoes">
+    <p-button
+      label="Cancelar"
+      severity="secondary"
+      (onClick)="cancelar()"
+    ></p-button>
+
+    <p-button
+      label="Salvar"
+      (onClick)="salvar()"
+    ></p-button>
+  </div>
+
+</p-card>
